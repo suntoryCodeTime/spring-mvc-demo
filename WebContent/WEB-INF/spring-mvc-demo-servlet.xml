@@ -16,6 +16,12 @@
             
     <!-- Load the Country Options Properties File in the Spring Config -->
     <util:properties  id="countryOptions" location="classpath:../countries.properties" />
+    
+    <!-- Load the Langauge Options Properties File in the Spring Config -->
+    <util:properties  id="languageOptions" location="classpath:../languages.properties" />
+    
+    <!-- Load the Operating Systems Options Properties File in the Spring Config -->
+    <util:properties  id="operatingSystemsOptions" location="classpath:../operatingsystems.properties" />
 
 	<!-- Step 3: Add support for component scanning -->
 	<context:component-scan base-package="com.suntorycodetime.springdemo" />

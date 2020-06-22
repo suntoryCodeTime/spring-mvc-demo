@@ -14,6 +14,12 @@ public class StudentController {
 	
 	@Value("#{countryOptions}")
 	private Map<String, String> countryOptions;
+	
+	@Value("#{languageOptions}")
+	private Map<String, String> languageOptions;
+	
+	@Value("#{operatingSystemsOptions}")
+	private Map<String, String> operatingSystemsOptions;
 
 	@RequestMapping("/showForm")
 	public String showForm(Model model) {
@@ -26,6 +32,12 @@ public class StudentController {
 		
 		//Add the country options to the model
 		model.addAttribute("countryOptions", countryOptions);
+		
+		//Add the language options to the model
+		model.addAttribute("languageOptions", languageOptions.values());
+		
+		//Add the language options to the model
+		model.addAttribute("operatingSystemsOptions", operatingSystemsOptions.values());
 		
 		return "student-form";
 	}

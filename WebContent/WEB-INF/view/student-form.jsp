@@ -26,6 +26,16 @@
 		
 		<br><br>
 		
+			Favorite Language:
+			<form:radiobuttons path="favoriteLanguage" items="${languageOptions}" />
+		
+		<br><br>
+		
+			Operating Systems:
+			<form:checkboxes path="operatingSystems" items="${operatingSystemsOptions}" />
+		
+		<br><br>
+		
 		<input type="submit" value="Submit" />
 	</form:form>
 	
