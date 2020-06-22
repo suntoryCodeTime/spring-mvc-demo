@@ -6,6 +6,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+import com.suntorycodetime.springdemo.mvc.validation.CourseCode;
+
 public class Customer {
 	
 	
@@ -24,7 +26,7 @@ public class Customer {
 	@Pattern(regexp="^[a-zA-Z0-9]{5}",message="Only 5 chars/digits.")
 	private String postalCode;
 	
-	@Pattern(regexp="^[a-zA-Z0-9]{6}",message="Only 3 chars followed by 3 digits.")
+	@CourseCode//(value="TOPS", message="must start with TOPS")
 	private String courseCode;
 	
 	public Customer() {
